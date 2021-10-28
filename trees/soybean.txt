@@ -1,0 +1,52 @@
+MAX_SIZE 3
+#
+LABEL bacterial_blight_phyllosticta
+INDEX 0
+PARENT biotic
+CHILDREN None
+#
+LABEL dicamba_damage
+INDEX 1
+PARENT stressed
+CHILDREN None
+#
+LABEL frogeye_leaf_spot
+INDEX 2
+PARENT fungal
+CHILDREN None
+#
+LABEL healthy
+INDEX 3
+PARENT unknown
+CHILDREN None
+#
+LABEL insect_damage
+INDEX 4
+PARENT biotic
+CHILDREN None
+#
+LABEL sudden_death_syndrome
+INDEX 5
+PARENT fungal
+CHILDREN None
+#
+LABEL stressed
+INDEX -1
+PARENT unknown
+CHILDREN biotic dicamba_damage
+#
+LABEL biotic
+INDEX -1
+PARENT stressed
+CHILDREN bacterial_blight_phyllosticta fungal insect_damage
+#
+LABEL fungal
+INDEX -1
+PARENT biotic
+CHILDREN sudden_death_syndrome frogeye_leaf_spot
+#
+LABEL unknown
+INDEX -1
+PARENT None
+CHILDREN biotic dicamba_damage
+#

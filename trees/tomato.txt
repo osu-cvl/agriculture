@@ -1,0 +1,82 @@
+MAX_SIZE 10
+#
+LABEL bacterial_spot
+INDEX 0
+PARENT stressed
+CHILDREN None
+#
+LABEL early_blight
+INDEX 1
+PARENT necrotroph
+CHILDREN None
+#
+LABEL healthy
+INDEX 2
+PARENT unknown
+CHILDREN None
+#
+LABEL late_blight
+INDEX 3
+PARENT hemi_biotroph
+CHILDREN None
+#
+LABEL leaf_mold
+INDEX 4
+PARENT hemi_biotroph
+CHILDREN None
+#
+LABEL mosaic_virus
+INDEX 5
+PARENT virus
+CHILDREN None
+#
+LABEL septoria_leaf_spot
+INDEX 6
+PARENT hemi_biotroph
+CHILDREN None
+#
+LABEL spider_mites
+INDEX 7
+PARENT stressed
+CHILDREN None
+#
+LABEL target_spot
+INDEX 8
+PARENT necrotroph
+CHILDREN None
+#
+LABEL yellow_leaf_curl_virus
+INDEX 9
+PARENT virus
+CHILDREN None
+#
+LABEL stressed
+INDEX -1
+PARENT unknown
+CHILDREN spider_mites bacterial_spot virus fungal
+#
+LABEL virus
+INDEX -1
+PARENT stressed
+CHILDREN mosaic_virus yellow_leaf_curl_virus
+#
+LABEL fungal
+INDEX -1
+PARENT stressed
+CHILDREN hemi_biotroph necrotroph
+#
+LABEL hemi_biotroph
+INDEX -1
+PARENT fungal
+CHILDREN late_blight septoria_leaf_spot leaf_mold
+#
+LABEL necrotroph
+INDEX -1
+PARENT fungal
+CHILDREN target_spot leaf_mold early_blight
+#
+LABEL unknown
+INDEX -1
+PARENT None
+CHILDREN healthy stressed
+#

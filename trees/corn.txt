@@ -1,0 +1,97 @@
+MAX_SIZE 10
+#
+LABEL common_rust
+INDEX 0
+PARENT fungal
+CHILDREN None
+#
+LABEL corn_borer
+INDEX 1
+PARENT biotic
+CHILDREN None
+#
+LABEL grey_leaf_spot
+INDEX 2
+PARENT necrotrophic
+CHILDREN None
+#
+LABEL healthy
+INDEX 3
+PARENT unknown
+CHILDREN None
+#
+LABEL herbicide_sensitivity
+INDEX 4
+PARENT abiotic
+CHILDREN None
+#
+LABEL holcus_spot
+INDEX 5
+PARENT biotic
+CHILDREN None
+#
+LABEL magnesium_potassium_deficiency
+INDEX 6
+PARENT nutrient_deficiency
+CHILDREN None
+#
+LABEL nitrogen_burn
+INDEX 7
+PARENT nutrient_stress
+CHILDREN None
+#
+LABEL nitrogen_deficiency
+INDEX 8
+PARENT nutrient_deficiency
+CHILDREN None
+#
+LABEL northern_corn_leaf_blight
+INDEX 9
+PARENT necrotrophic
+CHILDREN None
+#
+LABEL phosphorus_deficiency
+INDEX 10
+PARENT nutrient_deficiency
+CHILDREN None
+#
+LABEL stressed
+INDEX -1
+PARENT unknown
+CHILDREN biotic abiotic
+#
+LABEL biotic
+INDEX -1
+PARENT stressed
+CHILDREN holcus_spot corn_borer fungal
+#
+LABEL abiotic
+INDEX -1
+PARENT stressed
+CHILDREN herbicide_sensitivity nutrient_stress
+#
+LABEL fungal
+INDEX -1
+PARENT biotic
+CHILDREN common_rust necrotrophic
+#
+LABEL nutrient_stress
+INDEX -1
+PARENT abiotic
+CHILDREN nutrient_deficiency nitrogen_burn
+#
+LABEL necrotrophic
+INDEX -1
+PARENT fungal
+CHILDREN grey_leaf_spot northern_corn_leaf_blight
+#
+LABEL nutrient_deficiency
+INDEX -1
+PARENT nutrient_stress
+CHILDREN phosphorus_deficiency nitrogen_deficiency magnesium_potassium_deficiency
+#
+LABEL unknown
+INDEX -1
+PARENT None
+CHILDREN healthy stressed
+#
